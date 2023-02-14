@@ -1,0 +1,57 @@
+  .posts {
+      margin-bottom: 1rem;
+  }
+
+  .pagination {
+      height: 30px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 20%;
+  }
+
+  .numbers {
+      width: 71%;
+      display: flex;
+      justify-content: space-around;
+      user-select: none;
+  }
+
+  .prev {
+      visibility: hidden;
+  }
+
+  .prev,
+  .next {
+      font-weight: 700;
+      user-select: none;
+      filter: invert(1);
+  }
+
+  .prev,
+  .next,
+  .number {
+      padding: 10px 0.5rem;
+      cursor: pointer;
+      color: #1f1f1f;
+      transition: .3s;
+  }
+
+  .prev:hover,
+  .next:hover,
+  .number:hover {
+      background-color: #1f1f1f43;
+      color: #fff;
+  }
+
+  .prev:hover,
+  .next:hover {
+      background-color: rgb(29, 29, 29);
+  }
+
+  .currentNumber {
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 10px 13px;
+  }

@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Gulzari Optics - Lens Selection</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/font/stylesheet.css">
+    <link rel="stylesheet" href="assets/css/steps.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/filter.css">
+</head>
+<style>
+    .ls-sec-1 .box {
+        background-color: #eee;
+        border: 2px solid black;
+        text-align: center;
+        margin: 0 0.5rem;
+        cursor: pointer;
+    }
+
+    .ls-sec-1 .btns.ico img {
+        width: 40%;
+    }
+
+    .ls-sec-1 .box:hover {
+        background-color: #ddd;
+    }
+
+    .ls-sec-1 .btns {
+        display: flex;
+    }
+
+    .w-20 {
+        width: 155px;
+    }
+</style>
+
+<body>
+    <div id="dark_nav">
+    </div>
+
+    <div class="container">
+        <div class="ls-sec-1">
+            <div class="row pdg">
+                <div class="col-12">
+                    <p class="heading tcenter">
+                        Eye Glasses Prescription
+                    </p>
+                </div> 
+                <div class="container-fluid my-4">
+                    <div class="row justify-content-center selections pdg shadow">
+                        <div class="col-11 col-sm-10 col-md-10 col-lg-6 col-xl-10 text-center p-0 mt-3 mb-2">
+                            <div class="card px-0 pb-0 mb-3 border-0">
+                                <form id="msform">
+                                    <ul id="progressbar">
+                                        <li class="active" id="account"><strong>Prescription</strong></li>
+                                        <li id="personal"><strong>Rx Type</strong></li>
+                                        <li id="payment"><strong>Lens Type</strong></li>
+                                        <li id="four"><strong>Lens Options</strong></li>
+                                        <li id="confirm"><strong>Coating</strong></li>
+                                    </ul>
+                                    <br>
+                                    <p id="file-upload-filename"
+                                        class="fw-bolder text-dark fs-4 text-uppercase tcenter">
+                                        No prescriptions found
+                                    </p>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="select-file-form ico row my-4">
+                                                <div class="col-12 ">
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 my-2 col-sm-1">
+                                                    <div class="box position-relative  py-2 px-4">
+                                                        <div class="img my-4">
+                                                            <img src="assets/img/lens selectiion/icons/upload icon.png"
+                                                                alt="">
+                                                        </div>
+                                                        <p class="para fw-bold">
+                                                            upload image
+                                                        </p>
+                                                        <input type='file' class="position-absolute file-upload"
+                                                            onchange="readURL(this);" />
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-4 col-md-6 my-2 col-sm-1">
+                                                    <div class="box position-relative  py-2 px-4">
+                                                        <div class="img my-4">
+                                                            <img src="assets/img/lens selectiion/icons/take image icon.png"
+                                                                alt="">
+                                                        </div>
+                                                        <p class="para fw-bold">
+                                                            upload image
+                                                        </p>
+                                                        <input type='file' class="position-absolute file-upload"
+                                                            onchange="readURL(this);" />
+
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-4 col-md-6 my-2 col-sm-1">
+
+                                                    <div class="box position-relative py-2 px-4">
+                                                        <div class="img my-4">
+                                                            <img src="assets/img/lens selectiion/icons/try toogle.png"
+                                                                alt="">
+                                                        </div>
+                                                        <p class="para fw-bold">
+                                                            upload image
+                                                        </p>
+
+                                                        <input type='file' class="position-absolute file-upload"
+                                                            onchange="readURL(this);" />
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <img id="blah" src="http://placehold.it/180" alt="your image"
+                                                        class="w-100 my-3" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-12">
+                                                    <div class="d-flex align-items-center">
+                                                        <p class="text-uppercase mb-0 text-muted fw-bold me-3">
+                                                            enter name:
+                                                        </p>
+                                                        <div class="row w-100">
+                                                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                                                <div class="inp">
+                                                                    <div class="checkout-fields row py-3 w-75">
+                                                                        <div class="col-12 my-2 w-100">
+                                                                            <input type="text" placeholder="NAME*"
+                                                                                class="field outline-none px-4 d-block w-100 py-3 mb-0 rounded-0 shadow-none shadow-none"></input>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12">
+                                                    <p class="fw-bolder text-dark fs-4 text-uppercase tcenter">
+                                                        Add prescription
+                                                    </p>
+                                                </div>
+                                                <div class="col-12 my-1">
+                                                    <div class="row d-flex justify-content-start align-items-center">
+                                                        <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                                            <p class="fw-bolder text-dark fs-4 text-uppercase tcenter">
+                                                                OS(Left)
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-12">
+                                                            <p class="fw-bolder text-dark fs-4 text-uppercase tcenter">
+                                                                OS(Right)
+                                                            </p>
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2 col-sm-2 col-2 fw-bold my-2">
+                                                        </div>
+                                                        <div class="col-lg-2 col-md-2 col-sm-2 col-2 fw-bold my-2">
+                                                            SPH
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-12 my-2">
+                                                            <select
+                                                                class="form-select field rounded-0 shadow-none px-4 py-3 ">
+                                                                <option selected>+0.00</option>
+                                                                <option value="1">+1.00</option>
+                                                                <option value="2">+2.00</option>
+                                                                <option value="3">+3.00</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-12 my-2">
+                                                            <select
+                                                                class="form-select field rounded-0 shadow-none px-4 py-3">
+                                                                <option selected>+0.00</option>
+                                                                <option value="1">+1.00</option>
+                                                                <option value="2">+2.00</option>
+                                                                <option value="3">+3.00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 my-1">
+                                                    <div class="row d-flex justify-content-start align-items-center">
+                                                        <div class="col-lg-2 col-md-2 col-sm-2 col-2 fw-bold my-2">
+                                                            CYL
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-12 my-2">
+                                                            <select
+                                                                class="form-select field rounded-0 shadow-none px-4 py-3 ">
+                                                                <option selected>+0.00</option>
+                                                                <option value="1">+1.00</option>
+                                                                <option value="2">+2.00</option>
+                                                                <option value="3">+3.00</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-12 my-2">
+                                                            <select
+                                                                class="form-select field rounded-0 shadow-none px-4 py-3">
+                                                                <option selected>+0.00</option>
+                                                                <option value="1">+1.00</option>
+                                                                <option value="2">+2.00</option>
+                                                                <option value="3">+3.00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 my-1">
+                                                    <div class="row d-flex justify-content-start align-items-center">
+                                                        <div class="col-lg-2 col-md-2 col-sm-2 col-2 fw-bold my-2">
+                                                            AXIS
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-12 my-2">
+                                                            <select
+                                                                class="form-select field rounded-0 shadow-none px-4 py-3 ">
+                                                                <option selected>NONE</option>
+                                                                <option value="1">+1.00</option>
+                                                                <option value="2">+2.00</option>
+                                                                <option value="3">+3.00</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-12 my-2">
+                                                            <select
+                                                                class="form-select field rounded-0 shadow-none px-4 py-3">
+                                                                <option selected>NONE</option>
+                                                                <option value="1">+1.00</option>
+                                                                <option value="2">+2.00</option>
+                                                                <option value="3">+3.00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <style>
+                                                    input[type="checkbox"]:before,
+                                                    input[type="checkbox"]:after {
+                                                        display: none !important;
+                                                    }
+                                                </style>
+                                                <div class="col-12 my-1">
+                                                    <div class="d-flex align-items-center">
+                                                        <input class="form-check-input mt-0" type="checkbox" value=""
+                                                            id="flexCheckDefault">
+                                                        <label
+                                                            class="form-check-label fs-6 fw-bold text-muted text-dark"
+                                                            for="flexCheckDefault">
+                                                            I Have 2 PD numbers
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12 my-1">
+                                                    <div class="row d-flex align-items-center">
+                                                        <div class="col-lg-2 col-md-2 col-sm-2 col-2 fw-bold my-2">
+                                                            AXIS
+                                                        </div>
+                                                        <div class="col-lg-4 col-md-4 col-sm-12 my-2">
+                                                            <select
+                                                                class="form-select field rounded-0 shadow-none px-4 py-3 ">
+                                                                <option selected>PD</option>
+                                                                <option value="1">+1.00</option>
+                                                                <option value="2">+2.00</option>
+                                                                <option value="3">+3.00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                            value="Previous" />
+
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="third-sec text-center py-2 my-3">
+                                                        <p class="mb-0">
+                                                            Clear Lenses
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="third-sec text-center py-2 my-3">
+                                                        <p class="mb-0">
+                                                            Photochromatic (Dark in Sun)
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="third-sec text-center py-2 my-3">
+                                                        <p class="mb-0">
+                                                            Sunglasses (Always Dark)
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                            value="Previous" />
+
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="third-sec text-center py-2 my-3">
+                                                        <p class="mb-0">
+                                                            Photochromatic Brown + 0
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6 col-sm-12">
+                                                    <div class="third-sec text-center py-2 my-3">
+                                                        <p class="mb-0">
+                                                            Photochromatic Grey + 0
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                 
+                                            </div>
+                                        </div>
+                                        <input type="button" name="next" class="next action-button" value="Next" />
+                                        <input type="button" name="previous" class="previous action-button-previous"
+                                            value="Previous" />
+
+                                    </fieldset>
+                                    <fieldset>
+                                        <div class="form-card">
+                                            <div class="row"> <br><br>
+                                                <h2 class="text-dark text-center"><strong>No lenses available</strong></h2> <br>
+                                                <!-- <div class="row justify-content-center">
+                                                    <div class="col-3"> <img src="https://i.imgur.com/GwStPmg.png"
+                                                            class="fit-image"> </div>
+                                                </div> <br><br>
+                                                <div class="row justify-content-center">
+                                                    <div class="col-7 text-center">
+                                                        <h5 class="purple-text text-center">You Have Successfully Signed
+                                                            Up</h5>
+                                                    </div>
+                                                </div> -->
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pl-sec-3 d-flex align-items-center mt-5">
+        <div class="row pdg">
+            <div class="col-12">
+                <p class="heading text-light">
+                    see the<br> difference...
+                </p>
+                <button class="lbtn btn py-3 fw-bold px-4 my-4">shop now<i
+                        class="fa-solid fa-angle-right ms-2"></i></button>
+
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="sec-4">
+            <div class="row xpdg">
+                <div class="col-12">
+                    <div class="heading tcenter my-3">testimonials</div>
+                </div>
+                <div class="col-12" style="padding:5% 10%;">
+                    <div id="box">
+                        <div class="wrappers flex-column align-items-center">
+                            <img src="assets/img/about us/Footer Icon/quotes.png" class="quotes" alt="">
+                            <div class="testimonial-container" id="testimonial-container">
+                                <div id="testimonial1" class="active">
+                                    <img src="" />
+                                </div>
+                            </div>
+                            <button id="prev" onclick="prev()"><img
+                                    src="assets/img/Home-Page/Banner icons/testimonials icon/testimonials left arrow.png"
+                                    alt="left"></button>
+                            <button id="next" onclick="next()"><img
+                                    src="assets/img/Home-Page/Banner icons/testimonials icon/testimonials right arrow.png"
+                                    alt="left"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pdg">
+        <div class="sec-5 pdg">
+            <div class="row subs-row">
+                <div class="col-12 mb-5 subs-head">
+                    <div class="heading tcenter text-light">newsletter subscription</div>
+                </div>
+                <div class="col-12 mt-4 d-flex justify-content-center">
+                    <div class="subs d-flex p-1 bg-white w-75">
+                        <input type="text" placeholder="Email address"
+                            class="form-control border-0 shadow-none rounded-0">
+                        <button class="btn btn-dark border-0 shadow-none rounded-0 px-4 py-2">SUBSCRIBE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-section">
+        <div class="containe">
+          <div class="footer-cta ">
+            <div class="row top-footer">
+              <div class="col-xl-3 col-md-3 mb-30 logo-f text-center padding-y">
+                <div class="single-cta">
+                  <img src="assets/img/logo.png" class="footer-logo" alt="">
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-3 mb-30 d-flex justify-content-center align-items-center">
+                <div class="single-cta d-flex justify-content-center w-100 align-items-center contact-links avail">
+                  <img src="assets/img/Home-Page/Footer Icon/location.png" alt="">
+                  <div class="cta-text">
+                    <span>Lorem ipsum dolor sit <br> amet consectetur.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-3 mb-30 d-flex justify-content-center align-items-center">
+                <div class="single-cta d-flex justify-content-center w-100 align-items-center contact-links avail">
+                  <img src="assets/img/Home-Page/Footer Icon/phone.png" alt="">
+                  <div class="cta-text">
+                    <span>Phone: 00000000</span><br>
+                    <span>Organization No: 00000000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-3 mb-30 d-flex justify-content-center align-items-center">
+                <div class="single-cta d-flex justify-content-center w-100 align-items-center contact-links">
+                  <img src="assets/img/Home-Page/Footer Icon/email.png" alt="">
+                  <div class="cta-text">
+                    <span>Email: mail@info.com</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="footer-content pt-5 pb-3">
+            <div class="row">
+  
+              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center links bdr">
+  
+                <ul>
+                  <li class="list-unstyled my-3">
+                    <p class="fs-5 fw-bold mb-4 text-light">
+                      Quick Links
+                    </p>
+                  </li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="index.html">Home</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="p_list.html">men</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="p_list.html">women</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="p_list.html">kids</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="p_list.html">sun
+                      glasses</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="privacy.html">sale</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="help.html">help</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="pd_measurement.html">measure your pd</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center links bdr">
+                <ul>
+                  <li class="list-unstyled my-3">
+                    <p class="fs-5 fw-bold mb-4 text-light">
+                      Shop All
+                    </p>
+                  </li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="p_list.html">All
+                      glasses</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="p_list.html">all
+                      women's glasses</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="p_list.html">all
+                      men's glasses</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="p_list.html">all
+                      kid's glasses</a></li>
+  
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center links bdr">
+                <ul>
+                  <li class="list-unstyled my-3">
+                    <p class="fs-5 fw-bold mb-4 text-light">
+                      Out Styles
+                    </p>
+                  </li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="#">reactangle glasses</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="p_show.html">square
+                      glasses</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="p_show.html">cat
+                      eye glasses</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="p_show.html">triangle glasses</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="p_show.html">rounded glasses</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="p_show.html">oval
+                      glasses</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="p_show.html">view
+                      all</a></li>
+  
+                </ul>
+              </div>
+              <div class="col-lg-3 col-md-6 col-12 d-flex justify-content-center">
+  
+                <ul>
+                  <li class="list-unstyled my-3">
+                    <p class="fs-5 fw-bold mb-4 text-light">
+                      About Gulzari <br> Optics
+                    </p>
+                  </li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="about.html">about
+                      us</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="blog.html">our
+                      blog</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="#">contact us</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="term_cond.html">terms
+                      & conditions</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="#">privacy policy</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="#">faq's</a></li>
+                      <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="canc-refund.html">refund
+                        policy</a></li>
+                </ul>
+              </div>
+              <div class="col-12 my-4">
+                <div class="hr-theme-slash-2">
+                  <div class="hr-line"></div>
+                  <div class="hr-icon">
+                    <img class="mx-1" src="assets/img/Home-Page/Footer Icon/facebook.png" alt="">
+                    <img class="mx-1" src="assets/img/Home-Page/Footer Icon/linkedin.png" alt="">
+                    <img class="mx-1" src="assets/img/Home-Page/Footer Icon/twitter.png" alt="">
+                  </div>
+                  <div class="hr-line"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center">
+                <div class="copyright-text">
+                  <p> &copy; 2022 Gulzari Optics. All Right Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <footer class="footer-section phone">
+        <div class="containe">
+          <div class="footer-cta ">
+            <div class="row top-footer">
+              <div class="col-xl-3 col-md-3 mb-30 logo-f text-center padding-y">
+                <div class="single-cta">
+                  <img src="assets/img/logo.png" class="footer-logo" alt="">
+                </div>
+              </div>
+              <div class="col-12 text-center">
+  
+                <ul class="my-4">
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="index.html">Home</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="p_list.html">men</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="p_list.html">women</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="p_list.html">kids</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase" href="p_list.html">sun
+                      sun glasses</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="p_list.html">sale</a></li>
+                  <li class="list-unstyled my-3"><a class="text-light text-decoration-none text-uppercase"
+                      href="help.html">help</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-content pt-5 pb-3">
+            <div class="row">
+              <div class="col-xl-3 col-md-3 mb-30 d-flex justify-content-center align-items-center">
+                <div class="single-cta d-flex justify-content-center w-100 align-items-center contact-links avail">
+                  <img src="assets/img/Home-Page/Footer Icon/location.png" alt="">
+                  <div class="cta-text">
+                    <span>Lorem ipsum dolor sit <br> amet consectetur.</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-3 mb-30 d-flex justify-content-center align-items-center">
+                <div class="single-cta d-flex justify-content-center w-100 align-items-center contact-links avail">
+                  <img src="assets/img/Home-Page/Footer Icon/phone.png" alt="">
+                  <div class="cta-text">
+                    <span>Phone: 00000000</span><br>
+                    <span>Organization No: 00000000</span>
+                  </div>
+                </div>
+              </div>
+              <div class="col-xl-3 col-md-3 mb-30 d-flex justify-content-center align-items-center">
+                <div class="single-cta d-flex justify-content-center w-100 align-items-center contact-links">
+                  <img src="assets/img/Home-Page/Footer Icon/email.png" alt="">
+                  <div class="cta-text">
+                    <span>Email: mail@info.com</span>
+                  </div>
+                </div>
+              </div>
+  
+  
+  
+              <div class="col-12 my-4 d-flex justify-content-center align-items-center my-3 share">
+  
+                <img src="assets/img/Home-Page/Footer Icon/facebook.png" alt="">
+                <img src="assets/img/Home-Page/Footer Icon/linkedin.png" alt="">
+                <img src="assets/img/Home-Page/Footer Icon/twitter.png" alt="">
+  
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="copyright-area">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 text-center">
+                <div class="copyright-text">
+                  <p> Privacy Policy | Terms & Conditions | Cancellation & Refund Policy <br> &copy; 2022 Gulzari Optics.
+                    All Right Reserved</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <a id="button">
+        <img class="w-50" src="assets/img/about us/Footer Icon/goto_top.png" alt="">
+    </a>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="assets/js/go_to_top.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+    <script>
+        var input = document.querySelector('.file-upload');
+        var infoArea = document.getElementById('file-upload-filename');
+        function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        input.addEventListener('change', showFileName);
+
+        function showFileName(event) {
+
+            // the change event gives us the input it occurred in 
+            var input = event.srcElement;
+
+            // the input has an array of files in the `files` property, each one has a name that you can use. We're just using the name here.
+            var fileName = input.files[0].name;
+
+            // use fileName however fits your app best, i.e. add it into a div
+            infoArea.innerHTML = `Selected prescription "${fileName}"`;
+        }
+    </script>
+    <script>
+        $(function () {
+            $("#dark_nav").load("dark_nav.html");
+        });
+        const testimonials = [{
+            name: "Eva Sawyer",
+            testimonial: "Neque volutpat ac tincidunt vitae semper quis lectus nulla at volutpat diam ut venenatis tellus in metus vulputate eu scelerisque felis imperdiet proin fermentum leo vel orci porta non pulvinar neque laoreet suspendisse interdum consectetur"
+        }, {
+            name: "Katey Topaz",
+            testimonial: "Elementum tempus egestas sed sed risus pretium quam vulputate dignissim suspendisse in est ante in nibh mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo elit at imperdiet dui accumsan sit amet nulla"
+        }, {
+            name: "Jae Robin",
+            testimonial: "Orci nulla pellentesque dignissim enim sit amet venenatis urna cursus eget nunc scelerisque viverra mauris in aliquam sem fringilla ut morbi tincidunt augue interdum velit euismod in pellentesque massa placerat duis ultricies lacus sed turpis"
+        }, {
+            name: "Nicola Blakely",
+            testimonial: "Sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit"
+        }];
+        let i = 0; // current slide
+        let j = testimonials.length; // total slides
+        let testimonialContainer = document.getElementById("testimonial-container");
+
+        function next() {
+            i = (j + i + 1) % j;
+            displayTestimonial();
+        }
+
+        function prev() {
+            i = (j + i - 1) % j;
+            displayTestimonial();
+        }
+
+        function next1() {
+            i = (j + i + 1) % j;
+            displayTestimonial();
+        }
+
+        function prev1() {
+            i = (j + i - 1) % j;
+            displayTestimonial();
+        }
+        let displayTestimonial = () => {
+            testimonialContainer.innerHTML = `
+        <p>${testimonials[i].testimonial}</p> 
+        <h3>${testimonials[i].name}</h3>
+        `;
+        };
+        window.onload = displayTestimonial;
+
+
+        $('.slider-for').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
+            asNavFor: '.slider-nav'
+        });
+        $('.slider-nav').slick({
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            asNavFor: '.slider-for',
+            dots: false,
+            focusOnSelect: true
+        });
+
+        $('a[data-slide]').click(function (e) {
+            e.preventDefault();
+            var slideno = $(this).data('slide');
+            $('.slider-nav').slick('slickGoTo', slideno - 1);
+        });
+
+        $('.owl-carousel').owlCarousel({
+            loop: false,
+            margin: 20,
+            nav: true,
+            dots: false,
+            autoplay: true,
+            autoplayHoverPause: true,
+            navText: [
+                '<i class="fa fa-angle-left" aria-hidden="true"></i>',
+                '<i class="fa fa-angle-right" aria-hidden="true"></i>'
+            ],
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        })
+        $(function () {
+            $(".HeartAnimation").click(function () {
+                $(this).toggleClass("animate");
+            });
+        });
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="assets/js/steps.js"></script>
+</body>
+
+</html>
